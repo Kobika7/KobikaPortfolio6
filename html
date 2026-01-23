@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobika Maruthapandian | Portfolio</title>
+    <style>
+        :root {
+            --teal: #4db6ac;
+            --pink: #f8bbd0;
+            --dark-teal: #00897b;
+            --bg-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--teal), var(--pink));
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--dark-teal);
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--pink);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        h2 { color: var(--dark-teal); }
+
+        .btn {
+            display: inline-block;
+            background: var(--teal);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: var(--pink);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kobika Maruthapandian</h1>
+    <p>CS Enthusiast | AI Explorer | UI Designer</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container" id="about">
+    <h2>Hello!</h2>
+    <p>I am <strong>Kobika Maruthapandian</strong>, a computer science enthusiast excited about AI! I love designing things—especially interfaces—and making websites easy to access. I’m really creative and always excited to work on new projects.</p>
+</div>
+
+<div class="container" id="projects">
+    <h2>Projects Tab</h2>
+    <p>My latest AI and design work will appear here shortly!</p>
+</div>
+
+<div class="container" id="resume">
+    <h2>Resume Tab</h2>
+    <p>View my experience and skills in Computer Science and Design.</p>
+    <a href="#" class="btn">Download PDF</a>
+</div>
+
+<div class="container" id="contact">
+    <h2>Get in Touch!</h2>
+    <p>If you're interested in collaborating, please reach out!</p>
+    <p>Email: <a href="mailto:yourname@email.com" style="color: var(--teal);">kobika@email.com</a></p>
+</div>
+
+</body>
+</html>
