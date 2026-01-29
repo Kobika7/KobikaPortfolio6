@@ -4,8 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kobika Maruthapandian | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- Styles & Colors --- */
+        :root {
+            --teal: #e0f7fa;
+            --dark-teal: #4db6ac;
+            --pink: #fce4ec;
+            --dark-pink: #f06292;
+            --text: #444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--teal), var(--pink));
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: var(--dark-teal);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--dark-pink);
+        }
+
+        /* --- Sections --- */
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--dark-teal);
+            border-bottom: 3px solid var(--pink);
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- Buttons & Links --- */
+        .btn {
+            display: inline-block;
+            background: var(--dark-teal);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--dark-pink);
+            transform: translateY(-3px);
+        }
+
+        .project-card {
+            border-left: 5px solid var(--dark-pink);
+            padding: 15px;
+            background: #fafafa;
+            margin-bottom: 1rem;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* --- Contact Form Mini --- */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,50 +129,55 @@
         </ul>
     </nav>
 
-    <section id="about" class="hero">
-        <div class="container">
-            <h1>Hello! I am Kobika Maruthapandian</h1>
-            <p>I am a computer science enthusiast excited about AI, and love designing things like interfaces and making websites easy to access. I'm really creative and excited to work on new projects!</p>
-            <a href="mailto:your-email@example.com" class="btn">Get in Touch</a>
-        </div>
-    </section>
+    <div class="container">
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p><strong>Hello! I am Kobika Maruthapandian.</strong></p>
+            <p>
+                I am a computer science enthusiast excited about AI, and I love designing things like 
+                interfaces and making websites easy to access. I’m really creative about things and 
+                excited to work on new projects.
+            </p>
+            <a href="https://linkedin.com" target="_blank" style="color: var(--dark-pink);">View my LinkedIn profile →</a>
+        </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>AI Interface Design</h3>
-                <p>A sleek UI for an AI-powered assistant.</p>
-                <a href="https://github.com/yourlink" target="_blank">View Project</a>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>AI Chatbot Interface</h3>
+                <p>A sleek, user-friendly UI designed for a local LLM implementation.</p>
+                <a href="#" class="btn">View Project</a>
             </div>
-            <div class="card">
-                <h3>E-Commerce Web</h3>
-                <p>Designed for accessibility and ease of use.</p>
-                <a href="https://github.com/yourlink" target="_blank">View Project</a>
+            
+            <div class="project-card">
+                <h3>Data Visualization Tool</h3>
+                <p>A web-based tool focused on accessibility and clean data presentation.</p>
+                <a href="#" class="btn">GitHub Link</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <div class="resume-box">
-            <p>Interested in working together? View or download my full credentials below.</p>
-            <a href="resume.pdf" download class="btn pink-btn">Download Resume (PDF)</a>
-        </div>
-    </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>Interested in seeing my full background and technical skills?</p>
+            <a href="my-resume.pdf" download class="btn" style="background: var(--dark-pink);">Download My Resume (PDF)</a>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Tell me about your project..."></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>If you're interested in working together, please reach out!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
 
-    <footer>
-        <p>&copy; 2026 Kobika Maruthapandian. Built with creativity.</p>
+    </div>
+
+    <footer style="text-align: center; padding: 2rem; font-size: 0.8rem; color: #888;">
+        &copy; 2024 Kobika Maruthapandian. Designed with creativity.
     </footer>
 
 </body>
